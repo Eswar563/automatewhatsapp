@@ -1,23 +1,24 @@
-const { Client, NoAuth } = require('whatsapp-web.js');
-const qrcode = require('qrcode-terminal');
+// const { Client, LocalAuth } = require('whatsapp-web.js');
+// const qrcode = require('qrcode-terminal');
 const cron = require('node-cron');
+const client = require('../client');
 
-const client = new Client({
-    authStrategy: new NoAuth()
-});
+// const client = new Client({
+//     authStrategy: new LocalAuth()
+// });
 
 const scheduledMessages = [];
 
-// Initialize the WhatsApp client
-client.on('qr', qr => {
-    qrcode.generate(qr, { small: true });
-});
+// // Initialize the WhatsApp client
+// client.on('qr', qr => {
+//     qrcode.generate(qr, { small: true });
+// });
 
-client.on('ready', () => {
-    console.log('Client is ready');
-});
+// client.on('ready', () => {
+//     console.log('Client is ready');
+// });
 
-client.initialize();
+// client.initialize();
 
 // Schedule a message
 const scheduleMessage = async (req, res) => {
