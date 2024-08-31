@@ -2,11 +2,18 @@
   "name": "automatewhatsapp",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.19.2",
+    "node-cron": "^3.0.3",
+    "nodemon": "^3.1.4",
+    "qrcode-terminal": "^0.12.0",
+    "whatsapp-web.js": "^1.25.0"
+  }
 }
